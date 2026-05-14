@@ -1,0 +1,6 @@
+#include "Shared.xcconfig"
+
+// xcconfig files don't allow slashes in values without escaping.
+API_BASE_URL = http:/$()/localhost:3000
+
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) DEBUG

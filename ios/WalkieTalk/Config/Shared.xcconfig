@@ -1,0 +1,11 @@
+// Shared build settings for both Debug and Release.
+// Backend URL is the only real difference between the two — see Debug/Release.xcconfig.
+
+PRODUCT_BUNDLE_IDENTIFIER = com.adrian.walkietalkie
+PRODUCT_NAME = WalkieTalk
+IPHONEOS_DEPLOYMENT_TARGET = 17.0
+SWIFT_VERSION = 5.9
+TARGETED_DEVICE_FAMILY = 1
+
+// Allow plain-text HTTP only on localhost & local networks (Debug build).
+// Release builds talk to api.walkiehost.duckdns.org over HTTPS — no exception needed.

@@ -1,0 +1,5 @@
+#include "Shared.xcconfig"
+
+API_BASE_URL = https:/$()/api.walkiehost.duckdns.org
+
+SWIFT_OPTIMIZATION_LEVEL = -O

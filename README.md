@@ -42,8 +42,22 @@ cd /opt/walkie-talkie
 ## Status
 
 - ✅ Milestone 1: Repo scaffolding + first deploy
-- ⏳ Milestone 2: Auth + iOS shell
+- ✅ Milestone 2: Auth + iOS shell
 - ⏳ Milestone 3+: see spec
+
+## iOS app
+
+The Xcode project is generated from `ios/project.yml` via XcodeGen.
+
+```bash
+cd ios
+./setup.sh         # installs xcodegen via brew if needed, generates the project, opens Xcode
+```
+
+The `WalkieTalk.xcodeproj` is checked in too, so you can also just open it
+directly. If you change `project.yml`, re-run `xcodegen generate`.
+
+Debug build → `http://localhost:3000`. Release build → production.
 
 ## Operations
 

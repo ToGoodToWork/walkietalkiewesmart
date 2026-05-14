@@ -2,6 +2,9 @@ import Fastify from 'fastify';
 import helmet from '@fastify/helmet';
 import { env } from './env.js';
 import { healthRoutes } from './routes/health.js';
+import { authRoutes } from './routes/auth.js';
+import { meRoutes } from './routes/me.js';
+import authPlugin from './auth/middleware.js';
 
 const app = Fastify({
   logger: {
@@ -11,7 +14,11 @@ const app = Fastify({
 });
 
 await app.register(helmet, { contentSecurityPolicy: false });
+await app.register(authPlugin);
+
 await app.register(healthRoutes);
+await app.register(authRoutes);
+await app.register(meRoutes);
 
 const shutdown = async (signal: string) => {
   app.log.info({ signal }, 'shutting down');
