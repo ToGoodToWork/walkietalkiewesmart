@@ -1,0 +1,39 @@
+# Secrets — NEVER commit
+.env
+.env.local
+.env.*.local
+secrets.txt
+*.p8
+*.pem
+
+# Node
+node_modules/
+dist/
+*.log
+npm-debug.log*
+.npm
+.pnpm-store/
+
+# TypeScript
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# iOS build artifacts
+ios/build/
+ios/DerivedData/
+ios/**/xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+
+# Local data
+postgres-data/
+backend/dist/

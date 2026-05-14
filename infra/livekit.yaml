@@ -1,0 +1,14 @@
+port: 7880
+bind_addresses:
+  - ""
+rtc:
+  tcp_port: 7881
+  port_range_start: 50000
+  port_range_end: 50200
+  use_external_ip: true
+turn:
+  enabled: true
+  udp_port: 3478
+log_level: info
+# Keys are injected at start via the --keys CLI flag in docker-compose.yml.
+# See /docs/operations.md for how to rotate them.

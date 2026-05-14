@@ -1,0 +1,4 @@
+# This directory holds Drizzle migration files.
+# Run `npm run db:generate` on your Mac to populate it from src/db/schema.ts.
+# The Dockerfile COPIES this folder into the runtime image, so it must exist
+# (even if empty during initial scaffolding).

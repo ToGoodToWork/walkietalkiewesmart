@@ -1,0 +1,28 @@
+# Local-development Postgres only.
+# Backend runs on the host via `npm run dev` inside /backend.
+#
+# Start:   docker compose -f docker-compose.dev.yml up -d
+# Stop:    docker compose -f docker-compose.dev.yml down
+# Wipe:    docker compose -f docker-compose.dev.yml down -v
+name: walkie-talkie-dev
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: walkietalk
+      POSTGRES_USER: walkietalk
+      POSTGRES_PASSWORD: walkietalk
+    ports:
+      - "5432:5432"
+    volumes:
+      - dev_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U walkietalk -d walkietalk"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  dev_postgres_data:

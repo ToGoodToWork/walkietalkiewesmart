@@ -1,0 +1,15 @@
+# Global options
+{
+	email {$ACME_EMAIL}
+}
+
+# Backend API + WebSocket
+api.{$DUCKDNS_DOMAIN} {
+	encode zstd gzip
+	reverse_proxy backend:3000
+}
+
+# LiveKit signaling (WebSocket over TLS)
+livekit.{$DUCKDNS_DOMAIN} {
+	reverse_proxy livekit:7880
+}
