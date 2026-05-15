@@ -16,8 +16,6 @@ unless noted.
 
 ### `POST /auth/signup`
 
-Request:
-
 ```json
 {
   "email": "alice@example.com",
@@ -27,14 +25,9 @@ Request:
 }
 ```
 
-201 Response:
-
-```json
-{ "access": "eyJ...", "refresh": "eyJ..." }
-```
-
-Errors: 400 `invalid_input`/`invalid_invite`/`invite_expired`/`invite_used_up`,
-409 `email_taken`.
+201 → `{ "access": "...", "refresh": "..." }`.
+Errors: 400 `invalid_input` / `invalid_invite` / `invite_expired` /
+`invite_used_up`, 409 `email_taken`.
 
 ### `POST /auth/login`
 
@@ -42,16 +35,16 @@ Errors: 400 `invalid_input`/`invalid_invite`/`invite_expired`/`invite_used_up`,
 { "email": "alice@example.com", "password": "..." }
 ```
 
-200 → same shape as signup. 401 `invalid_credentials`.
+200 → `{ access, refresh }`. 401 `invalid_credentials`.
 
 ### `POST /auth/refresh`
 
 ```json
-{ "refresh_token": "eyJ..." }
+{ "refresh_token": "..." }
 ```
 
-200 → new `{ access, refresh }`. The old refresh token is revoked.
-401 `invalid_refresh` or `expired_refresh`.
+200 → new `{ access, refresh }`. Old refresh token is revoked (rotation).
+401 `invalid_refresh` / `expired_refresh`.
 
 ## Authenticated
 
@@ -65,7 +58,7 @@ Errors: 400 `invalid_input`/`invalid_invite`/`invite_expired`/`invite_used_up`,
     "display_name": "Alice",
     "avatar_url": null,
     "status": "offline",
-    "created_at": "2026-05-14T..."
+    "created_at": "..."
   },
   "org": { "id": "uuid", "name": "My Organization" },
   "roles": [
@@ -85,12 +78,57 @@ Errors: 400 `invalid_input`/`invalid_invite`/`invite_expired`/`invite_used_up`,
 
 `permissions` is the union (logical OR) across all of the user's roles.
 
+### `GET /channels`
+
+Returns channels visible to the caller (`can_join || can_read`), with
+per-channel computed grants:
+
+```json
+[
+  {
+    "id": "uuid",
+    "name": "General",
+    "description": "Default channel",
+    "type": "normal",
+    "position": 0,
+    "can_join": true,
+    "can_speak": true,
+    "can_read": true,
+    "can_post": true,
+    "can_manage": false
+  }
+]
+```
+
+Grant rules:
+- A role with `bypass_channel_perms = true` grants everything.
+- Otherwise grants are the OR of `channel_permissions` rows for the user's roles.
+- `private` channels also require a `channel_members` row.
+
+### `POST /channels/:id/join-token`
+
+No body. Returns a short-lived LiveKit token:
+
+```json
+{
+  "livekit_url": "wss://livekit.walkiehost.duckdns.org",
+  "token": "eyJ..."
+}
+```
+
+Token TTL: 1 hour. Token grants reflect channel permissions
+(`canPublish = can_speak`, `canSubscribe = can_join`). Room name is
+`channel-<channel_id>`.
+
+Errors: 403 `cannot_join_channel`, 404 `channel_not_found`.
+
 ## Token lifetimes
 
-- Access: 15 minutes
-- Refresh: 30 days, rotated on every use
+- Access JWT: 15 minutes
+- Refresh JWT: 30 days, rotated on every use
+- LiveKit JWT: 1 hour
 
 ## Coming in later milestones
 
-Channels, voice join-tokens, messages, whispers, admin endpoints — see
-`claude-code-prompt.md` §9.
+Multi-channel voice management (M4), messages + WS (M5), Global Feed (M6),
+whispers (M7), admin endpoints (M8).

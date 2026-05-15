@@ -25,6 +25,7 @@
     "fastify": "^4.28.1",
     "fastify-plugin": "^5.1.0",
     "jose": "^6.2.3",
+    "livekit-server-sdk": "^2.15.3",
     "postgres": "^3.4.4",
     "zod": "^3.23.8"
   },

@@ -9,10 +9,9 @@ const schema = z.object({
   JWT_ACCESS_SECRET: z.string().min(32),
   JWT_REFRESH_SECRET: z.string().min(32),
 
-  // Still optional until Milestone 3.
-  LIVEKIT_URL: z.string().url().optional(),
-  LIVEKIT_API_KEY: z.string().optional(),
-  LIVEKIT_API_SECRET: z.string().optional(),
+  LIVEKIT_URL: z.string().url(),
+  LIVEKIT_API_KEY: z.string().min(1),
+  LIVEKIT_API_SECRET: z.string().min(32),
 });
 
 const parsed = schema.safeParse(process.env);

@@ -62,3 +62,39 @@ struct MeResponse: Codable, Equatable {
     let roles: [Role]
     let permissions: Permissions
 }
+
+enum ChannelType: String, Codable {
+    case normal, broadcast, `private`
+}
+
+struct Channel: Codable, Identifiable, Equatable, Hashable {
+    let id: String
+    let name: String
+    let description: String?
+    let type: ChannelType
+    let position: Int
+    let canJoin: Bool
+    let canSpeak: Bool
+    let canRead: Bool
+    let canPost: Bool
+    let canManage: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, description, type, position
+        case canJoin = "can_join"
+        case canSpeak = "can_speak"
+        case canRead = "can_read"
+        case canPost = "can_post"
+        case canManage = "can_manage"
+    }
+}
+
+struct JoinToken: Codable, Equatable {
+    let livekitUrl: String
+    let token: String
+
+    enum CodingKeys: String, CodingKey {
+        case livekitUrl = "livekit_url"
+        case token
+    }
+}

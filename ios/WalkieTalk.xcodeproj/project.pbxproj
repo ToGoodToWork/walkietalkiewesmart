@@ -11,30 +11,50 @@
 		02F50EBE4CB0C1A6C95251DE /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4A25B49C902753E5868771 /* AuthStore.swift */; };
 		0E4448E26AA3755680A4DA88 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011B2C80FFC0E7A2D6D7E0E /* AuthView.swift */; };
 		1D07EC30F30D5A4C823CF76E /* WalkieTalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3744AD1E60945B51DF72B /* WalkieTalkApp.swift */; };
+		23346A92CB7603CFA026410C /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F811E813307335748D651177 /* ChannelView.swift */; };
 		26378E6B8A1E7329F2F9DED1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D74376E13BDEA54AB8631 /* Models.swift */; };
-		392B13B0CA1F2D6A45EE1694 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69161FF04B4CA888E905D01D /* HomeView.swift */; };
 		7150065BF9B0DD9BB4C96E54 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CBC291DD1445735CFE7A1 /* AuthAPI.swift */; };
+		7A59E2162D5CF0ACE70389AE /* ChannelsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F181F96A73FA5EE298F6EA /* ChannelsAPI.swift */; };
 		92D8E88B92CBC0AF80FABFE9 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96FA64A6F85BC0B152DF820 /* KeychainStore.swift */; };
 		AF4EEA8DCFF56C73B31569E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41375E7E651BFF1644388BD9 /* Assets.xcassets */; };
+		BC59AD9C38AFDC6FD65BF054 /* ChannelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB15BC433CEBE6AC7C6676 /* ChannelsListView.swift */; };
 		D1A15B8E031BB2A193F13542 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F3FDE8AE370D5BBAA5BAE4 /* RootView.swift */; };
+		DED0878D68F2F36E71990AB3 /* RoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D08D29E4A716B594BF8C4B /* RoomController.swift */; };
+		E994C36897B89EA153D3F109 /* AudioSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B4EBAE359BBEA53D73CC6F /* AudioSessionController.swift */; };
+		F785D2AA497D5E45185ECA9C /* LiveKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13CB11F03C168925060FFCF6 /* LiveKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01F181F96A73FA5EE298F6EA /* ChannelsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsAPI.swift; sourceTree = "<group>"; };
+		05D08D29E4A716B594BF8C4B /* RoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomController.swift; sourceTree = "<group>"; };
 		399950134AF9E276A76F4E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		41375E7E651BFF1644388BD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B3CBC291DD1445735CFE7A1 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		68379BAA8D014BE15222F502 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		69161FF04B4CA888E905D01D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		78CB15BC433CEBE6AC7C6676 /* ChannelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsListView.swift; sourceTree = "<group>"; };
 		936D74376E13BDEA54AB8631 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		A5F3744AD1E60945B51DF72B /* WalkieTalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkieTalkApp.swift; sourceTree = "<group>"; };
 		B011B2C80FFC0E7A2D6D7E0E /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		B5B4EBAE359BBEA53D73CC6F /* AudioSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionController.swift; sourceTree = "<group>"; };
 		B6F3FDE8AE370D5BBAA5BAE4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		B96FA64A6F85BC0B152DF820 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		CAE3F4A8F2A2F9FEE047247A /* WalkieTalk.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = WalkieTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4A25B49C902753E5868771 /* AuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
 		CFB7593AF1F145B3378FA564 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		EFBA1F6B73A3971AC1C7B1EF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F811E813307335748D651177 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97BA32AA727E97E479502102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F785D2AA497D5E45185ECA9C /* LiveKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		4B3BEE6D8FD787AE8B6DD5B2 /* Storage */ = {
@@ -52,11 +72,13 @@
 				41375E7E651BFF1644388BD9 /* Assets.xcassets */,
 				399950134AF9E276A76F4E5D /* Info.plist */,
 				A5F3744AD1E60945B51DF72B /* WalkieTalkApp.swift */,
+				D28BE19B92939BB2D538C1DF /* Audio */,
 				5F0BA519DD5FBF185580CCEC /* Config */,
 				B7508EEAFFD3BF21BDD75D15 /* Models */,
 				63A462043DCA267CD74A2E47 /* Networking */,
 				4B3BEE6D8FD787AE8B6DD5B2 /* Storage */,
 				8C431ED6E84C89422BDDAC27 /* Views */,
+				7D13B598A597546C15445781 /* Voice */,
 			);
 			path = WalkieTalk;
 			sourceTree = "<group>";
@@ -75,8 +97,17 @@
 			children = (
 				EFBA1F6B73A3971AC1C7B1EF /* APIClient.swift */,
 				5B3CBC291DD1445735CFE7A1 /* AuthAPI.swift */,
+				01F181F96A73FA5EE298F6EA /* ChannelsAPI.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		7D13B598A597546C15445781 /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				05D08D29E4A716B594BF8C4B /* RoomController.swift */,
+			);
+			path = Voice;
 			sourceTree = "<group>";
 		};
 		83F73F78729B38A08E268BEC = {
@@ -91,7 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				B011B2C80FFC0E7A2D6D7E0E /* AuthView.swift */,
-				69161FF04B4CA888E905D01D /* HomeView.swift */,
+				78CB15BC433CEBE6AC7C6676 /* ChannelsListView.swift */,
+				F811E813307335748D651177 /* ChannelView.swift */,
 				B6F3FDE8AE370D5BBAA5BAE4 /* RootView.swift */,
 			);
 			path = Views;
@@ -113,6 +145,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D28BE19B92939BB2D538C1DF /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				B5B4EBAE359BBEA53D73CC6F /* AudioSessionController.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +162,7 @@
 			buildPhases = (
 				B8A7F02D0BF5B983738C6F6E /* Sources */,
 				394942C18572C57F1D465189 /* Resources */,
+				97BA32AA727E97E479502102 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +170,7 @@
 			);
 			name = WalkieTalk;
 			packageProductDependencies = (
+				13CB11F03C168925060FFCF6 /* LiveKit */,
 			);
 			productName = WalkieTalk;
 			productReference = CAE3F4A8F2A2F9FEE047247A /* WalkieTalk.app */;
@@ -158,6 +200,9 @@
 			);
 			mainGroup = 83F73F78729B38A08E268BEC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				41FE945179D05988D688CDC3 /* XCRemoteSwiftPackageReference "client-sdk-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B330542480A6EA4185B677CB /* Products */;
 			projectDirPath = "";
@@ -185,12 +230,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				01139A55B4F8E48032C00D97 /* APIClient.swift in Sources */,
+				E994C36897B89EA153D3F109 /* AudioSessionController.swift in Sources */,
 				7150065BF9B0DD9BB4C96E54 /* AuthAPI.swift in Sources */,
 				02F50EBE4CB0C1A6C95251DE /* AuthStore.swift in Sources */,
 				0E4448E26AA3755680A4DA88 /* AuthView.swift in Sources */,
-				392B13B0CA1F2D6A45EE1694 /* HomeView.swift in Sources */,
+				23346A92CB7603CFA026410C /* ChannelView.swift in Sources */,
+				7A59E2162D5CF0ACE70389AE /* ChannelsAPI.swift in Sources */,
+				BC59AD9C38AFDC6FD65BF054 /* ChannelsListView.swift in Sources */,
 				92D8E88B92CBC0AF80FABFE9 /* KeychainStore.swift in Sources */,
 				26378E6B8A1E7329F2F9DED1 /* Models.swift in Sources */,
+				DED0878D68F2F36E71990AB3 /* RoomController.swift in Sources */,
 				D1A15B8E031BB2A193F13542 /* RootView.swift in Sources */,
 				1D07EC30F30D5A4C823CF76E /* WalkieTalkApp.swift in Sources */,
 			);
@@ -384,6 +433,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41FE945179D05988D688CDC3 /* XCRemoteSwiftPackageReference "client-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/livekit/client-sdk-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13CB11F03C168925060FFCF6 /* LiveKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41FE945179D05988D688CDC3 /* XCRemoteSwiftPackageReference "client-sdk-swift" */;
+			productName = LiveKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E321E556BEF952C90F42CC9 /* Project object */;
 }

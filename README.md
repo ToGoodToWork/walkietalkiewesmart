@@ -43,7 +43,8 @@ cd /opt/walkie-talkie
 
 - ✅ Milestone 1: Repo scaffolding + first deploy
 - ✅ Milestone 2: Auth + iOS shell
-- ⏳ Milestone 3+: see spec
+- ✅ Milestone 3: Channels + single-channel voice (PTT, self-mute, speaker toggle, lock-to-talk)
+- ⏳ Milestone 4+: see spec
 
 ## iOS app
 

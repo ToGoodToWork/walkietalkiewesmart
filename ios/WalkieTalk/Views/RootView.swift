@@ -12,7 +12,7 @@ struct RootView: View {
                 AuthView()
                     .transition(.opacity)
             case .loggedIn(let me):
-                HomeView(me: me)
+                ChannelsListView(me: me)
                     .transition(.opacity)
             }
         }

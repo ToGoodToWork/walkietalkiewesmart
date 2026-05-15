@@ -20,6 +20,11 @@ configFiles:
   Debug: WalkieTalk/Config/Debug.xcconfig
   Release: WalkieTalk/Config/Release.xcconfig
 
+packages:
+  LiveKit:
+    url: https://github.com/livekit/client-sdk-swift
+    from: 2.0.0
+
 targets:
   WalkieTalk:
     type: application
@@ -28,6 +33,8 @@ targets:
       - path: WalkieTalk
         excludes:
           - "Config/*.xcconfig"
+    dependencies:
+      - package: LiveKit
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.adrian.walkietalkie
